@@ -17,3 +17,6 @@ steps:
     projectFile: '**/*.csproj'
     outputDirectory: '$(build.artifactStagingDirectory)/apk'
     configuration: 'Release'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
