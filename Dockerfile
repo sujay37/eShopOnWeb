@@ -1,11 +1,7 @@
 FROM node:18-alpine
-
 WORKDIR /app
-
-COPY src/Web/package.json ./
-COPY src/Web/package-lock.json ./   # if you have it
+COPY package.json ./
+COPY package-lock.json ./
 RUN npm install
-
-COPY src/Web ./
-
+COPY . .
 CMD ["npm", "start"]
