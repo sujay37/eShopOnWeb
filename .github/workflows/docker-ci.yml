@@ -9,7 +9,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
@@ -17,4 +16,3 @@ jobs:
         run: |
           TIMESTAMP=$(date +%s)
           docker build . -f Dockerfile -t my-image-name:$TIMESTAMP
-
