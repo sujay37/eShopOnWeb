@@ -12,7 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build the Docker image
-        run: |
-          TIMESTAMP=$(date +%s)
-          docker build . -f Dockerfile -t my-image-name:$TIMESTAMP
+     - name: Build the Docker image
+  run: |
+    TIMESTAMP=$(date +%s)
+    docker build ./src/Web -f ./src/Web/Dockerfile -t my-image-name:$TIMESTAMP
+
